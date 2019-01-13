@@ -1,87 +1,91 @@
-package com.sample;
+package cn.appSys.pojo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.io.Serializable;
+import java.util.Date;
 
-public class AppCategory {
+/**
+ * @Description  
+ * @Author  Hunter
+ * @Date 2019-01-13 
+ */
 
-  private long id;
-  private String categoryCode;
-  private String categoryName;
-  private long parentId;
-  private long createdBy;
-  private java.sql.Timestamp creationTime;
-  private long modifyBy;
-  private java.sql.Timestamp modifyDate;
+public class AppCategory  implements Serializable {
 
+	private static final long serialVersionUID =  4848266943566382419L;
+	private Long id;	 // 主键ID
+	private String categoryCode;	 // 分类编码
+	private String categoryName;	 // 分类名称
+	private Long parentId;	 // 父级节点id
+	private Long createdBy;	 // 创建者（来源于backend_user用户表的用户id）
+	private Date creationTime;	 // 创建时间
+	private Long modifyBy;	 // 更新者（来源于backend_user用户表的用户id）
+	private Date modifyDate;	 // 最新更新时间
 
-  public long getId() {
-    return id;
-  }
+	public Long getId() {
+		return this.id;
+	}
 
-  public void setId(long id) {
-    this.id = id;
-  }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
+	public String getCategoryCode() {
+		return this.categoryCode;
+	}
 
-  public String getCategoryCode() {
-    return categoryCode;
-  }
+	public void setCategoryCode(String categoryCode) {
+		this.categoryCode = categoryCode;
+	}
 
-  public void setCategoryCode(String categoryCode) {
-    this.categoryCode = categoryCode;
-  }
+	public String getCategoryName() {
+		return this.categoryName;
+	}
 
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
 
-  public String getCategoryName() {
-    return categoryName;
-  }
+	public Long getParentId() {
+		return this.parentId;
+	}
 
-  public void setCategoryName(String categoryName) {
-    this.categoryName = categoryName;
-  }
+	public void setParentId(Long parentId) {
+		this.parentId = parentId;
+	}
 
+	public Long getCreatedBy() {
+		return this.createdBy;
+	}
 
-  public long getParentId() {
-    return parentId;
-  }
+	public void setCreatedBy(Long createdBy) {
+		this.createdBy = createdBy;
+	}
 
-  public void setParentId(long parentId) {
-    this.parentId = parentId;
-  }
+	public Date getCreationTime() {
+		return this.creationTime;
+	}
 
+	public void setCreationTime(Date creationTime) {
+		this.creationTime = creationTime;
+	}
 
-  public long getCreatedBy() {
-    return createdBy;
-  }
+	public Long getModifyBy() {
+		return this.modifyBy;
+	}
 
-  public void setCreatedBy(long createdBy) {
-    this.createdBy = createdBy;
-  }
+	public void setModifyBy(Long modifyBy) {
+		this.modifyBy = modifyBy;
+	}
 
+	public Date getModifyDate() {
+		return this.modifyDate;
+	}
 
-  public java.sql.Timestamp getCreationTime() {
-    return creationTime;
-  }
-
-  public void setCreationTime(java.sql.Timestamp creationTime) {
-    this.creationTime = creationTime;
-  }
-
-
-  public long getModifyBy() {
-    return modifyBy;
-  }
-
-  public void setModifyBy(long modifyBy) {
-    this.modifyBy = modifyBy;
-  }
-
-
-  public java.sql.Timestamp getModifyDate() {
-    return modifyDate;
-  }
-
-  public void setModifyDate(java.sql.Timestamp modifyDate) {
-    this.modifyDate = modifyDate;
-  }
+	public void setModifyDate(Date modifyDate) {
+		this.modifyDate = modifyDate;
+	}
 
 }

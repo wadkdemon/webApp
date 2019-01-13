@@ -1,97 +1,100 @@
-package com.sample;
+package cn.appSys.pojo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.io.Serializable;
+import java.util.Date;
 
-public class DataDictionary {
+/**
+ * @Description  
+ * @Author  Hunter
+ * @Date 2019-01-13 
+ */
 
-  private long id;
-  private String typeCode;
-  private String typeName;
-  private long valueId;
-  private String valueName;
-  private long createdBy;
-  private java.sql.Timestamp creationDate;
-  private long modifyBy;
-  private java.sql.Timestamp modifyDate;
+public class DataDictionary  implements Serializable {
 
+	private static final long serialVersionUID =  3111468848467253954L;
+	private Long id;	 // 主键ID
+	private String typeCode;	 // 类型编码
+	private String typeName;	 // 类型名称
+	private Long valueId;	 // 类型值ID
+	private String valueName;	 // 类型值Name
+	private Long createdBy;	 // 创建者（来源于backend_user用户表的用户id）
+	private Date creationDate;	 // 创建时间
+	private Long modifyBy;	 // 更新者（来源于backend_user用户表的用户id）
+	private Date modifyDate;	 // 最新更新时间
 
-  public long getId() {
-    return id;
-  }
+	public Long getId() {
+		return this.id;
+	}
 
-  public void setId(long id) {
-    this.id = id;
-  }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
+	public String getTypeCode() {
+		return this.typeCode;
+	}
 
-  public String getTypeCode() {
-    return typeCode;
-  }
+	public void setTypeCode(String typeCode) {
+		this.typeCode = typeCode;
+	}
 
-  public void setTypeCode(String typeCode) {
-    this.typeCode = typeCode;
-  }
+	public String getTypeName() {
+		return this.typeName;
+	}
 
+	public void setTypeName(String typeName) {
+		this.typeName = typeName;
+	}
 
-  public String getTypeName() {
-    return typeName;
-  }
+	public Long getValueId() {
+		return this.valueId;
+	}
 
-  public void setTypeName(String typeName) {
-    this.typeName = typeName;
-  }
+	public void setValueId(Long valueId) {
+		this.valueId = valueId;
+	}
 
+	public String getValueName() {
+		return this.valueName;
+	}
 
-  public long getValueId() {
-    return valueId;
-  }
+	public void setValueName(String valueName) {
+		this.valueName = valueName;
+	}
 
-  public void setValueId(long valueId) {
-    this.valueId = valueId;
-  }
+	public Long getCreatedBy() {
+		return this.createdBy;
+	}
 
+	public void setCreatedBy(Long createdBy) {
+		this.createdBy = createdBy;
+	}
 
-  public String getValueName() {
-    return valueName;
-  }
+	public Date getCreationDate() {
+		return this.creationDate;
+	}
 
-  public void setValueName(String valueName) {
-    this.valueName = valueName;
-  }
+	public void setCreationDate(Date creationDate) {
+		this.creationDate = creationDate;
+	}
 
+	public Long getModifyBy() {
+		return this.modifyBy;
+	}
 
-  public long getCreatedBy() {
-    return createdBy;
-  }
+	public void setModifyBy(Long modifyBy) {
+		this.modifyBy = modifyBy;
+	}
 
-  public void setCreatedBy(long createdBy) {
-    this.createdBy = createdBy;
-  }
+	public Date getModifyDate() {
+		return this.modifyDate;
+	}
 
-
-  public java.sql.Timestamp getCreationDate() {
-    return creationDate;
-  }
-
-  public void setCreationDate(java.sql.Timestamp creationDate) {
-    this.creationDate = creationDate;
-  }
-
-
-  public long getModifyBy() {
-    return modifyBy;
-  }
-
-  public void setModifyBy(long modifyBy) {
-    this.modifyBy = modifyBy;
-  }
-
-
-  public java.sql.Timestamp getModifyDate() {
-    return modifyDate;
-  }
-
-  public void setModifyDate(java.sql.Timestamp modifyDate) {
-    this.modifyDate = modifyDate;
-  }
+	public void setModifyDate(Date modifyDate) {
+		this.modifyDate = modifyDate;
+	}
 
 }

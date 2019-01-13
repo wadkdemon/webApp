@@ -1,117 +1,118 @@
-package com.sample;
+package cn.appSys.pojo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.io.Serializable;
+import java.util.Date;
 
-public class AdPromotion {
+/**
+ * @Description  
+ * @Author  Hunter
+ * @Date 2019-01-13 
+ */
 
-  private long id;
-  private long appId;
-  private String adPicPath;
-  private long adPv;
-  private long carouselPosition;
-  private java.sql.Timestamp startTime;
-  private java.sql.Timestamp endTime;
-  private long createdBy;
-  private java.sql.Timestamp creationDate;
-  private long modifyBy;
-  private java.sql.Timestamp modifyDate;
+public class AdPromotion  implements Serializable {
 
+	private static final long serialVersionUID =  3618263710393585648L;
+	private Long id;	 // 主键id
+	private Long appId;	 // appId（来源于：app_info表的主键id）
+	private String adPicPath;	 // 广告图片存储路径
+	private Long adPv;	 // 广告点击量
+	private Long carouselPosition;	 // 轮播位（1-n）
+	private Date startTime;	 // 起效时间
+	private Date endTime;	 // 失效时间
+	private Long createdBy;	 // 创建者（来源于backend_user用户表的用户id）
+	private Date creationDate;	 // 创建时间
+	private Long modifyBy;	 // 更新者（来源于backend_user用户表的用户id）
+	private Date modifyDate;	 // 最新更新时间
 
-  public long getId() {
-    return id;
-  }
+	public Long getId() {
+		return this.id;
+	}
 
-  public void setId(long id) {
-    this.id = id;
-  }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
+	public Long getAppId() {
+		return this.appId;
+	}
 
-  public long getAppId() {
-    return appId;
-  }
+	public void setAppId(Long appId) {
+		this.appId = appId;
+	}
 
-  public void setAppId(long appId) {
-    this.appId = appId;
-  }
+	public String getAdPicPath() {
+		return this.adPicPath;
+	}
 
+	public void setAdPicPath(String adPicPath) {
+		this.adPicPath = adPicPath;
+	}
 
-  public String getAdPicPath() {
-    return adPicPath;
-  }
+	public Long getAdPv() {
+		return this.adPv;
+	}
 
-  public void setAdPicPath(String adPicPath) {
-    this.adPicPath = adPicPath;
-  }
+	public void setAdPv(Long adPv) {
+		this.adPv = adPv;
+	}
 
+	public Long getCarouselPosition() {
+		return this.carouselPosition;
+	}
 
-  public long getAdPv() {
-    return adPv;
-  }
+	public void setCarouselPosition(Long carouselPosition) {
+		this.carouselPosition = carouselPosition;
+	}
 
-  public void setAdPv(long adPv) {
-    this.adPv = adPv;
-  }
+	public Date getStartTime() {
+		return this.startTime;
+	}
 
+	public void setStartTime(Date startTime) {
+		this.startTime = startTime;
+	}
 
-  public long getCarouselPosition() {
-    return carouselPosition;
-  }
+	public Date getEndTime() {
+		return this.endTime;
+	}
 
-  public void setCarouselPosition(long carouselPosition) {
-    this.carouselPosition = carouselPosition;
-  }
+	public void setEndTime(Date endTime) {
+		this.endTime = endTime;
+	}
 
+	public Long getCreatedBy() {
+		return this.createdBy;
+	}
 
-  public java.sql.Timestamp getStartTime() {
-    return startTime;
-  }
+	public void setCreatedBy(Long createdBy) {
+		this.createdBy = createdBy;
+	}
 
-  public void setStartTime(java.sql.Timestamp startTime) {
-    this.startTime = startTime;
-  }
+	public Date getCreationDate() {
+		return this.creationDate;
+	}
 
+	public void setCreationDate(Date creationDate) {
+		this.creationDate = creationDate;
+	}
 
-  public java.sql.Timestamp getEndTime() {
-    return endTime;
-  }
+	public Long getModifyBy() {
+		return this.modifyBy;
+	}
 
-  public void setEndTime(java.sql.Timestamp endTime) {
-    this.endTime = endTime;
-  }
+	public void setModifyBy(Long modifyBy) {
+		this.modifyBy = modifyBy;
+	}
 
+	public Date getModifyDate() {
+		return this.modifyDate;
+	}
 
-  public long getCreatedBy() {
-    return createdBy;
-  }
-
-  public void setCreatedBy(long createdBy) {
-    this.createdBy = createdBy;
-  }
-
-
-  public java.sql.Timestamp getCreationDate() {
-    return creationDate;
-  }
-
-  public void setCreationDate(java.sql.Timestamp creationDate) {
-    this.creationDate = creationDate;
-  }
-
-
-  public long getModifyBy() {
-    return modifyBy;
-  }
-
-  public void setModifyBy(long modifyBy) {
-    this.modifyBy = modifyBy;
-  }
-
-
-  public java.sql.Timestamp getModifyDate() {
-    return modifyDate;
-  }
-
-  public void setModifyDate(java.sql.Timestamp modifyDate) {
-    this.modifyDate = modifyDate;
-  }
+	public void setModifyDate(Date modifyDate) {
+		this.modifyDate = modifyDate;
+	}
 
 }
